@@ -1,0 +1,1139 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+      xmlns:x="urn:schemas-microsoft-com:office:excel"
+      xmlns="http://www.w3.org/TR/REC-html40">
+    <head>
+        <title>CDT JIRA</title>
+        <style type="text/css">
+         table {
+             mso-displayed-decimal-separator:"\.";
+             mso-displayed-thousand-separator:"\,";
+         }
+         body
+         {
+             margin: 0px;
+             font-size: 12px;
+             font-family: Arial, sans-serif;
+             color:black;
+         }
+
+        </style>
+        <META HTTP-EQUIV="Content-Type" Content="application/vnd.ms-excel; charset=UTF-8">
+        <!-- JRA-7598 - ensure fields (e.g. description) occupy only one cell - even fields containing newlines. -->
+        <!--
+             Vertical align all cells to the top, in order to align all issue rows of issuetable to the top,
+             since Excel does not use or save the css files it is hardcoded here.
+           -->
+        <style>
+         @page
+         {
+             mso-page-orientation:landscape;
+             margin:.25in .25in .5in .25in;
+             mso-header-margin:.5in;
+             mso-footer-margin:.25in;
+             mso-footer-data:"&R&P of &N";
+             mso-horizontal-page-align:center;
+             mso-vertical-page-align:center;
+         }
+
+         td.issuekey,
+         td.issuetype,
+         td.status {
+             mso-style-parent: "";
+             mso-number-format: \@;
+             text-align: left;
+         }
+         br
+         {
+             mso-data-placement:same-cell;
+         }
+
+         td
+         {
+             vertical-align: top;
+         }
+        </style>
+
+        <!--[if gte mso 9]><xml>
+            <x:ExcelWorkbook>
+            <x:ExcelWorksheets>
+            <x:ExcelWorksheet>
+            <x:Name>general_report</x:Name>
+            <x:WorksheetOptions>
+            <x:Print>
+            <x:ValidPrinterInfo/>
+            </x:Print>
+            </x:WorksheetOptions>
+            </x:ExcelWorksheet>
+            </x:ExcelWorksheets>
+            </x:ExcelWorkbook>
+            </xml><![endif]-->
+    </head>
+    <body>
+
+        <table border="1">
+            <tr bgcolor="#0747a6" height="30">
+                <td colspan="4">
+                    <img src="https://nhsd-jira.digital.nhs.uk/images/jira-software.png" width="57" height="30" border="0" alt="CDT JIRA">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <a href="https://nhsd-jira.digital.nhs.uk/issues/?jql=project+%3D+DCA+AND+issuetype+%3D+Test+AND+resolution+%3D+Unresolved+AND+text+%7E+%22pfs%22+ORDER+BY+priority+DESC%2C+updated+DESC" data-testid="filterNameHref">CDT JIRA</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    Displaying <strong>24</strong> issues at <strong>05/Oct/23 10:52 AM</strong>.
+                </td>
+            </tr>
+        </table>
+
+        
+
+
+                            <issuetable-web-component data-content="issues">
+                <table id="issuetable"  border="1" cellpadding="3" cellspacing="1" width="100%">
+                        <thead>
+        <tr class="rowHeader">
+            
+                                                            <th class="colHeaderLink headerrow-issuekey" data-id="issuekey">
+                            Key
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-summary" data-id="summary">
+                            Summary
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-customfield_10919" data-id="customfield_10919">
+                            Zephyr Teststep
+                                                    </th>
+                                                
+                                                            <th class="colHeaderLink headerrow-description" data-id="description">
+                            Description
+                                                    </th>
+                                                                    </tr>
+    </thead>
+    <tbody>
+                    
+
+                <tr id="issuerow1179738" rel="1179738" data-issuekey="DCA-144" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-144" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-144">DCA-144</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted uncategorised data is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on specific uncategorised data, AND a patient with permission to view their uncategorised data requests to see their uncategorised data</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple different types of uncategorised data on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all uncategorised data EXCEPT the uncategorised data that was selected to be redacted</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1182253" rel="1182253" data-issuekey="DCA-145" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-145" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-145">DCA-145</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Documents over 5mb not returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a patient requesting to see my documents using the document endpoint</p></td>
+                        <td style="max-height: 25px;"><p>Patient with documents below or equal to 5mb and above 5mb on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN only the documents equal to or below 5mb are returned</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179735" rel="1179735" data-issuekey="DCA-143" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-143" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-143">DCA-143</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted diary entry is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific diary entry, AND a patient with permission to view their diary entries requests to see their diary entries</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple diary entries on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all diary entries EXCEPT the diary entry that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179734" rel="1179734" data-issuekey="DCA-142" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-142" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-142">DCA-142</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted document is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific document, AND a patient with permission to view their documents requests to see their documents</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple documents on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all documents EXCEPT the document that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179733" rel="1179733" data-issuekey="DCA-141" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-141" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-141">DCA-141</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted referral is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific referral, AND a patient with permission to view their referrals requests to see their referrals</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple referrals on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all referrals EXCEPT the referral that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179732" rel="1179732" data-issuekey="DCA-140" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-140" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-140">DCA-140</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted investigation is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific investigation, AND a patient with permission to view their investigations requests to see their investigations</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple investigation on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all investigations EXCEPT the investigation that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179729" rel="1179729" data-issuekey="DCA-139" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-139" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-139">DCA-139</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted problem is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific problem, AND a patient with permission to view their problems requests to see their problems</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple problems on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all problems EXCEPT the problem that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179727" rel="1179727" data-issuekey="DCA-138" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-138" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-138">DCA-138</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted consultation is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific consultation, AND a patient with permission to view their consultations requests to see their consultations</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple consultations on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all consultations EXCEPT the consultation that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179725" rel="1179725" data-issuekey="DCA-137" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-137" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-137">DCA-137</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted immunisation is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific immunisation, AND a patient with permission to view their immunisations requests to see their immunisations</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple immunisations on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all immunisations EXCEPT the immunisation that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179722" rel="1179722" data-issuekey="DCA-136" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-136" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-136">DCA-136</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted medication is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific medication, AND a patient with permission to view their medications requests to see their medications</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple medications on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all medications EXCEPT the medication that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1179180" rel="1179180" data-issuekey="DCA-135" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-135" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-135">DCA-135</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Redacted allergy is not returned to the patient
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a primary care provider, WHEN I select 'Hidden from Patient Facing Services' on a specific allergy, AND a patient with permission to view their allergies requests to see their allergies</p></td>
+                        <td style="max-height: 25px;"><p>Patient with multiple allergies on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include all allergies EXCEPT the allergy that was selected to be redacted </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162439" rel="1162439" data-issuekey="DCA-132" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-132" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-132">DCA-132</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Patient with &#39;documents&#39; permission only has permitted elements on record returned 
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'documents' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a full Medical Record including: demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY all demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals and documents returned</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1163957" rel="1163957" data-issuekey="DCA-134" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-134" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-134">DCA-134</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Only outbound referrals with intent = order returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'full' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a record that includes: an inbound referral, an outbound referral with intent = plan, an outbound referral with intent = order  </p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY the outbound referral that has intent = order </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162440" rel="1162440" data-issuekey="DCA-133" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-133" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-133">DCA-133</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Patient with &#39;full&#39; permission only has permitted elements on record returned 
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'full' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a full Medical Record including: demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ALL of their demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162438" rel="1162438" data-issuekey="DCA-131" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-131" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-131">DCA-131</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Patient with &#39;detailed&#39; permission only has permitted elements on record returned 
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'detailed' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a full Medical Record including: demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY all demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations and referrals.</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162433" rel="1162433" data-issuekey="DCA-130" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-130" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-130">DCA-130</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Patient with &#39;summary&#39; permission only has permitted elements on record returned 
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'summary' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a full Medical Record including: demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY all demographics, medications and allergies</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162427" rel="1162427" data-issuekey="DCA-129" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-129" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-129">DCA-129</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Patient with &#39;none&#39; permission only has permitted elements on record returned 
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'none' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a full Medical Record including: demographics, medications, allergies, read codes / clinical codes, immunisations, health conditions, test results, consultations, referrals, documents and free text</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include NONE of these elements</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162418" rel="1162418" data-issuekey="DCA-128" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-128" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-128">DCA-128</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Unreviewed documents should never be returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'full' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with documents of multiple types, some reviewed, some not reviewed</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY the reviewed types</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1162413" rel="1162413" data-issuekey="DCA-127" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-127" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-127">DCA-127</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - ensure unfiled lab reports are never returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'full' access</p></td>
+                        <td style="max-height: 25px;"><p>Patient with filed AND unfiled lab reports on their record</p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should include ONLY the filed lab reports</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1161987" rel="1161987" data-issuekey="DCA-126" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-126" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-126">DCA-126</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - ensure that Diary entries are never returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>GIVEN that l am a Provider system, WHEN a PFS Get Structured record request is received AND the patient has 'full' access </p></td>
+                        <td style="max-height: 25px;"><p>Patient with a diary entry linked to a consultation, and a diary entry unlinked to any consultation </p></td>
+                        <td style="max-height: 25px;"><p>THEN the returned bundle should NOT include any diary entries</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+
+
+                <tr id="issuerow1114435" rel="1114435" data-issuekey="DCA-30" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-30" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-30">DCA-30</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Problem linked to a Diary Entry
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>Given that l am a Provider system <br/>
+When a PFS Get Structured request is received<br/>
+And there is a Diary Entry associated to a Problem</p></td>
+                        <td style="max-height: 25px;"><p>A Problem that has a linked Diary Entry</p></td>
+                        <td style="max-height: 25px;"><p>Then the Diary Entry (Procedure Request) resource will not be returned<br/>
+And there will be a Secondary List returned with the title 'Problems - diary entries related to problems'<br/>
+And there will be a note entry with the text 'Items excluded due to confidentiality and/or patient preferences.'</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description">      Test the following scenario:<br/>
+<br/>
+If a Diary Entry is linked to a Problem and a the patient pulls back the whole record, then the Diary Entry should be omitted from the bundle. The Secondary List should have the title &#39;Problems - diary entries related to problems&#39; but with the note populated with &#39;Items excluded due to confidentiality and/or patient preference&#39;<br/>
+<br/>
+*{*}This behavior needs to be confirmed by the BA reviewing these scripts{*}*
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow1113107" rel="1113107" data-issuekey="DCA-28" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-28" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-28">DCA-28</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - Diary Entry associated to a Consultation
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>Given that l am a Provider system <br/>
+When a PFS Get Structured request is received<br/>
+And there is a Diary Entry linked to a completed consultation</p></td>
+                        <td style="max-height: 25px;"><p>A completed Consultation that has a Recall (Diary Entry) associated to a Plan heading</p></td>
+                        <td style="max-height: 25px;"><p>Then the Diary Entry (Procedure Request) resource will not be returned<br/>
+And there will be a Secondary List returned with the title 'Consultations - diary entries contained in consultations'<br/>
+And there will be a note entry with the text 'Items excluded due to confidentiality and/or patient preferences.'</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description">      Test the following scenario:<br/>
+<br/>
+If a Diary Entry is associated to a Consultation and a the patient pulls back the record, then the Diary Entry should be omitted from the bundle with a Secondary List with the title &#39;Consultations - diary entries contained in consultations&#39; but with the note populated with &#39;Items excluded due to confidentiality and/or patient preference&#39;<br/>
+<br/>
+*{*}This behavior needs to be confirmed by the BA reviewing these scripts{*}*
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow1113100" rel="1113100" data-issuekey="DCA-27" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-27" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-27">DCA-27</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - ensure that Draft Consultations are not returned
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>Given that l am a Provider system<br/>
+When a PFS Get Structured record request is received<br/>
+And the patient has consultations that are in a Draft status</p></td>
+                        <td style="max-height: 25px;"><p>Patient with a mixture of Consultations, some in Draft, others in a 'Finished' state</p></td>
+                        <td style="max-height: 25px;"><p>Then the returned bndle should not include Draft consultations</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description">      Test to ensure that Draft Consultations are not returned by the Provider 
+  </td>
+                    </tr>
+
+
+                <tr id="issuerow1112876" rel="1112876" data-issuekey="DCA-26" class="issuerow">
+                                            <td class="issuekey">
+
+    <a class="issue-link" data-issue-key="DCA-26" href="https://nhsd-jira.digital.nhs.uk/browse/DCA-26">DCA-26</a>
+</td>
+                                            <td class="summary"><p>
+                PFS Get Structured - request with invalid Diary Entries parameter
+    </p>
+</td>
+                                            <td class="customfield_10919">        <div>
+        <table id="project-config-steps-table" class="aui" style="width: 100%">
+            <thead>
+            <tr>
+                <th style="max-height: 25px;"></th>
+                <th style="max-height: 25px;">Test Step</th>
+                <th style="max-height: 25px;">Test Data</th>
+                <th style="max-height: 25px;">Expected Result</th>
+                <th style="max-height: 25px;">Attachment Details</th>
+                <th style="max-height: 25px;">Test Step Custom Fields</th>
+            </tr>
+            </thead>
+            <tbody>
+                
+                    
+                    
+                    <tr style="word-wrap: break-word;">
+                        <td style="max-height: 25px;">1</td>
+                        <td style="max-height: 25px;"><p>Given that l am a Provider system<br/>
+When a PFS Get Structured Request is received <br/>
+And the Diary Entries part parameter is included</p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"><p>Then an Operation Outcome should be generated<br/>
+And the HTTP Error Code will be 422<br/>
+And the Spine ErrorCode will be INVALID_PARAMETER </p></td>
+                        <td style="max-height: 25px;"></td>
+                        <td style="max-height: 25px;"></td>
+                    </tr>
+                            </tbody>
+        </table>
+    </div>
+    </td>
+                                            <td class="description"></td>
+                    </tr>
+                </tbody>
+    </table>
+    </issuetable-web-component>
+    <div class="end-of-stable-message"></div>
+            <table border="1" >
+<tr>
+    <td bgcolor="#f5f5f5" colspan="4"><font size="1">
+        Generated at Thu Oct 05 10:52:35 BST 2023 by Alex Bazin using Jira 9.4.4#940004-sha1:26f64053da9e8780329c4d14d752a94327e2e61d.
+    </font></td>
+</tr>
+</table>
+
+</body>
+</html>
